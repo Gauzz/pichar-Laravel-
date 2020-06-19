@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/_post_marker','PostMarkerController@postMarker')->name('marker.post');
+Route::post('/_fetch_marker','PostMarkerController@fetchMarker')->name('marker.fetch');
+Route::post('/_post_pattern','PostPatternController@postPattern')->name('pattern.post');
